@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+//parallax
+
+.parallax {
+  background-image: url("./images/slovenia.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 150vh;
+  width: 100%;
+  background-attachment: fixed;
+}
+
+.pallarax2 {
+  background-image: url("./images/pallax2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 140vh;
+  width: 100%;
+  background-attachment: fixed;
+}
+
+// first page
+.box-wrapper {
+  width: 30%;
+  height: 300px;
+  position: absolute;
+  right: 10%;
+  top: 15%;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  transition: all ease-in-out 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  animation: fadeIn;
+  animation-duration: 1s;
+  h1 {
+    font-size: 3vw;
+    font-weight: 900;
+    text-transform: capitalize;
+    transition: opacity 0.3s ease-in-out;
+  }
+  p {
+    opacity: 0;
+    font-size: 2vw;
+    position: absolute;
+    transition: opacity 0.3s ease-in-out;
+  }
+  &:hover {
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    h1 {
+      opacity: 0;
+    }
+    p {
+      opacity: 1;
+    }
+  }
+}
+
+//head
+
+.head-custom {
+  padding: 3rem;
+  background-color: rgba($color: white, $alpha: 0.5);
+  position: absolute;
+  top: 70%;
+  height: 35vh;
+  text-align: center;
+  .head-profile {
+    background-color: lightcoral;
+    height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 15px 15px slategray;
+    transition: all 0.3s ease-out;
+    span {
+      font-size: 4rem;
+    }
+    &:hover {
+      box-shadow: none;
+    }
+  }
+  animation: fadeInLeft;
+  animation-duration: 2s;
+}
+//main
+
+.custom-fluid {
+  padding-top: 50px;
+}
+
+.row-box {
+  margin-bottom: 50px;
+  padding: 20px;
+  border: black solid 1px;
+  box-shadow: 15px 15px gray;
+  transition: all 0.3s ease-out;
+  .col-box-1,
+  .col-box-2,
+  .col-box-3,
+  .col-box-4 {
+    padding: 20px;
+    background-color: rgb(56, 146, 56);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    span {
+      font-size: 4rem;
+    }
+    border-radius: 2px;
+  }
+  .col-box-2 {
+    background-color: rgb(128, 32, 128);
+  }
+  .col-box-3 {
+    background-color: rgb(238, 182, 77);
+  }
+  .col-box-4 {
+    background-color: lightblue;
+  }
+  &:hover {
+    box-shadow: none;
+  }
+}
+//aside
+.aside-custom {
+  margin-top: 1rem;
+  .custom-card {
+    background-color: transparent;
+    padding-top: 4rem;
+  }
+  .card-box {
+    background-color: rgba($color: white, $alpha: 0.4);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    span {
+      font-size: 4rem;
+    }
+  }
+}
+
+// form
+
+.container-custom {
+  margin: 5rem 0 5rem 0;
+  background-color: rgba($color: white, $alpha: 0.5);
+  animation: fadeInLeft;
+  animation-duration: 2s;
+  form {
+    padding: 2rem;
+  }
+}
+
+//footer
+
+.container-footer {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  padding: 100px 0;
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 770px) {
+  .container-custom {
+    background-color: slategray;
+    box-shadow: 15px 15px gray;
+  }
+}
